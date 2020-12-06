@@ -13,6 +13,7 @@ sudo make install
 sudo adduser -system --no-create-home jamulus
 sudo adduser jamulus audio
 cd /home/pi
+echo "*** You MUST reboot your machine for these changes to take effect ***"
 
 
 
