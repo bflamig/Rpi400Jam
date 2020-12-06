@@ -6,10 +6,11 @@ Tools to easily create a Jamulus installation on the Raspberry Pi 400
 $ git clone https://github.com/bflamig/Rpi400Jam.git
 
 ## Step 2: Move to Rpi400Jam directory and confirm file permissions:
-
+```
 $ cd Rpi400Jam
 $ chmod 755 j*.sh
 $ ls -al
+```
  
 ## Step 3: Copy the script files to your bin directory:
 
@@ -17,8 +18,10 @@ $ sudo cp j*.sh /usr/local/bin
   
 ## Step 4: You can now get rid of the Rpi400Jam directory:
 
+```
 $ cd
 $ rm -r -f Rpi400Jam
+```
   
 ## Step 5: Installing Jamulus and its prerequisites for the first time.
 
