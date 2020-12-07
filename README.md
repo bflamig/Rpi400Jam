@@ -4,7 +4,7 @@ Tools to easily create a Jamulus installation on the Raspberry Pi 400
 
 ## Step 0: Just want to download pre-configured image
 
-A. If all you want to do is download a Raspbery Pi image with Jamulus pre-installed, well, have we got a deal for you! Just click on the following download link: [one drive link](https://1drv.ms/u/s!AhEZTg91Hm5djLobpYkFROBpFmt-1g?e=ktAjwo "rpi400_jamulus_img.gz")
+A. If all you want to do is download a Raspbery Pi image with Jamulus pre-installed, well, have we got a deal for you! Just click on the following download link: [rpi400_jamulus_img.gz](https://1drv.ms/u/s!AhEZTg91Hm5djLobg5Sz8dHm40XtNg?e=Ge6tUO "rpi400_jamulus_img.gz")
 
 This is a roughly 1.5 GB image file. For documentation on how to use that image, copy the PDF file from the main Rpi400Jam code directory.
 
