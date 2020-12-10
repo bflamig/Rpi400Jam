@@ -51,6 +51,8 @@ Run the jamulus_install.sh script from your home directory, and BE SURE TO INCLU
 $ cd
 $ jamulus_install.sh r3_6_1
 ```
+
+NOTE: We also install the qjackctl utility, as well as a utility called patchage. These are not required to run Jamulus. We just find them useful for time to time in checking out connections, etc.
   
 ## Step 6: REBOOT YOUR MACHINE. THIS IS IMPORTANT!
 
