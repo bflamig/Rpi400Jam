@@ -10,7 +10,7 @@ There are two ways you can go about setting up your Pi to run Jamulus. One is to
 
 A. If all you want to do is download a Raspbery Pi SD card image with Jamulus pre-installed, well, have we got a deal for you! Just click on the following link to download the roughly 1.5 GB file (!): [rpi400_jamulus_img.gz](https://1drv.ms/u/s!AhEZTg91Hm5djLolQteTlFIwnUPyWw?e=rvrKlW "rpi400_jamulus_img.gz")
 
-For documentation on how to use this SD card image, copy the "Step by Step" PDF file from the main Rpi400Jam code directory.
+For documentation on how to use this SD card image, open the "Step by Step" PDF file from the main Rpi400Jam code directory.
 
 B. If you'd like to build the Raspberry Pi image yourself, perform the steps below.
 
