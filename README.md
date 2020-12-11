@@ -99,3 +99,47 @@ NOTE: For lowest latency, it's usually best to try checking the "Use small netwo
 ## Step 9. Running Jamulus from GUI.
 
 Once you've confirmed the Jamulus installation is good, you can more easily run Jamulus by clicking on the Jamulus icon in "Sound and Video" entry of the main menu on the desktop. Note that you don't need to start qjackctl at first. In fact, you don't need it at all.
+
+## Step 10. Setup Jamulus Server as a Service (optional)
+
+You can run Jamulus as a server by using the -s command line option (along with some others -- see Jamulus documentation) but its easier to set it up as a service and run it that way. The file jamulus.service has the settings for doing this. This file needs to be copied to another place in the OS, as follows:
+
+```
+$ cd ~/Rpi400Jam
+$ sudo chmod 644 jamulus.service
+$ cp jamulus.service /etc/systemd/system/jamulus.service
+```
+
+## Step 11. Run Jamulus Server as a Service
+
+To start the jamulus service:
+
+```
+$ sudo systemctl start jamulus
+```
+
+You can view the system log to see if the service started correctly
+
+$ cat /var/log/syslog
+
+Scroll to the bottom to see the latest log messages
+
+To stop the jamulus service:
+
+```
+$ sudo systemctl stop jamulus
+```
+
+It's also possible to have jamulus enabled as a service at startup
+
+```
+$ sudo systemctl enable jamulus
+```
+
+And then to disable it:
+
+```
+$ sudo systemctl disable jamulus
+```
+
+Personally, we don't like doing it this way. We prefer to start and stop jamulus manually. Your mileage may very of course.
