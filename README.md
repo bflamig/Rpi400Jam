@@ -4,7 +4,7 @@ We've found using the new Raspberry Pi 400 with your favorite USB audio device a
 
 While these tools were developed with the Raspberry Pi 400 in mind, they will probably also work on any of the Raspberry Pi models, 3B+ and up, though that hasn't been tested thoroughly yet.
 
-There are two ways you can go about setting up your Pi to run Jamulus. One is to just the pre-configured image file (meant for the Raspberry Pi 400), the other is to install Jamulus yourself, using the scripts we provide here.
+There are two ways you can go about setting up your Pi to run Jamulus. One is to just the pre-configured image file (meant for the Raspberry Pi 400), the other is to install Jamulus yourself, using the scripts we provide here. These scripts should work for all versions of the Raspberry Pi.
 
 ## Step 0: When you just want to download a pre-configured image
 
@@ -78,7 +78,7 @@ $ cat ~/.jackdrc
 
 We've defaulted the settings to a period buffer size of 64, number of periods to 2, and a Jamulus-required sample rate of 48000. This should work fine on a Raspberry Pi 400, though your mileage may vary. We've also configured Jack to run at a high priority of 95, and the -T option means that Jack will stop running after Jamulus finishes (assuming its the last client). If you need to change any of these settings, you can manually edit the .jackdrc file. Alternatively, if you have qjackctl installed, you can just use that to configure the Jack settings. Note there is an option in qjackctl to save to the .jackdrc file.
 
-While it's possible to use qjackctl to start Jack, you have to remember to do that before starting Jamulus. Because of this, I don't usually use qjackctl, but rather let Jamulus rely directly on the .jackdrc file. However, running qjackctl ahead of time is useful for the initial setup, as you can easily see how many xruns you are getting, etc. But once you've got settings you are happy with, there's no reason to use qjackctl every time you run Jamulus.
+While it's possible to use qjackctl to configure Jack, you have to remember to do that before starting Jamulus. Because of this, we don't usually use qjackctl, but rather let Jamulus rely on the .jackdrc file. However, running qjackctl first is useful for the initial Jamulus setup, as you can easily see how many xruns you are getting, make changes, etc. But once you've got settings you are happy with, there's no reason you need to use qjackctl when starting Jamulus (unless you have some complicated routings.)
   
 ## Step 8: Confirm that Jamulus runs correctly, Part 1.
 
