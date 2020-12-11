@@ -13,7 +13,7 @@ IOSchedulingPriority=0
 # This line below is what you want to edit according to your preferences
 ExecStart=/usr/local/bin/Jamulus --server --nogui --fastupdate --discononquit \
 --log /var/log/jamulus/jamulus.log \
---serverinfo "Rpi400Jam;Phoenix;225 \
+--serverinfo "Rpi400Jam;Phoenix;225" \
 --welcomemessage "<h2>Welcome to RpiJam400 Jamulus Server</h2>" \
 --numchannels 10
 # end of section you might want to alter
