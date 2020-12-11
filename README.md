@@ -1,6 +1,6 @@
 # Rpi400Jam
 
-Using the new Raspberry Pi 400 with your favorite USB audio device and monitor makes for a great, compact setup for running Jamulus. With that in mind, here are some tools you can use to easily create a Jamulus installation on a Raspberry Pi 400. These tools come in two basic forms: (1) Using a pre-configured SD card image, or (2) using scripts to install Jamulus on an already setup machine.
+Using the new Raspberry Pi 400 with your favorite USB audio device and monitor makes for a great, compact setup for running Jamulus. With that in mind, here are some tools you can use to easily create a Jamulus installation on a Raspberry Pi 400. These tools come in two basic forms: (1) Using a pre-configured SD card image, or (2) using scripts to install Jamulus on an existing machine.
 
 The preconfigured SD card image was built for the Raspberry Pi 400, and probably would only work there. The scripts should work on any Raspberry Pi.
 
