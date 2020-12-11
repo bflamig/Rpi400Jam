@@ -34,14 +34,7 @@ $ ls -al
 
 $ sudo cp j*.sh /usr/local/bin
   
-## Step 4: You can now get rid of the Rpi400Jam directory:
-
-```
-$ cd
-$ rm -r -f Rpi400Jam
-```
-  
-## Step 5: Installing Jamulus and its prerequisites for the first time.
+## Step 4: Installing Jamulus and its prerequisites for the first time.
 
 Run the jamulus_install.sh script from your home directory, and BE SURE TO INCLUDE THE Jamulus version number you'd like to install. At the time of this writing, the latest release is r3_6_1 so that's what we show below. DON'T FORGET TO INCLUDE THIS ARGUMENT. This script will take a while to run, as it is installing a bunch of prerequisites, downloading Jamulus from github, and then compiling the source code. The compilation step takes a while -- possibly ten minutes or more:
 
@@ -52,11 +45,11 @@ $ jamulus_install.sh r3_6_1
 
 NOTE: We also install the qjackctl utility, as well as a utility called patchage. These are not required to run Jamulus. We just find them useful for time to time in checking out connections, etc.
   
-## Step 6: REBOOT YOUR MACHINE. THIS IS IMPORTANT!
+## Step 5: REBOOT YOUR MACHINE. THIS IS IMPORTANT!
 
 $ sudo reboot now
   
-## Step 7: Setup sound card for Jack audio service, Part 1
+## Step 6: Setup sound card for Jack audio service, Part 1
 
 After rebooting (or while shutdown), hook up your sound card if it's not already hooked up, and then determine its name by using the following command, which lists the sound cards on your machine.
 
@@ -66,7 +59,7 @@ In the list produced your sound card will likely be last. Its name is in the squ
   
 ## Step 7: Setup sound card for Jack audio service, Part 2
 
-Given the name determined in Step 7, Part 1, create the settings for Jack audio that Jamulus can use by running the following script. Put the device name in as the first argument. This script will create a hidden file called ~/.jackdrc in the home directory that Jack uses to determine its settings when Jamulus asks to be a client:
+Given the name determined in Step 6, create the settings for Jack audio that Jamulus can use by running the following script. Put the device name in as the first argument. This script will create a hidden file called ~/.jackdrc in the home directory that Jack uses to determine its settings when Jamulus asks to be a client:
 
 $ jack_setup.sh <device_name_here>
 
