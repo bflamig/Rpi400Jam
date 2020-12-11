@@ -1,10 +1,8 @@
 # Rpi400Jam
 
-We've found using the new Raspberry Pi 400 with your favorite USB audio device and monitor makes for a great, compact setup for running Jamulus. With that in mind, we've provided tools to easily create a Jamulus installation on a Raspberry Pi 400. 
+Using the new Raspberry Pi 400 with your favorite USB audio device and monitor makes for a great, compact setup for running Jamulus. With that in mind, here are some tools you can use to easily create a Jamulus installation on a Raspberry Pi 400. These tools come in two basic forms: (1) Using a pre-configured SD card image, or (2) using scripts to install Jamulus on an already setup machine.
 
-While these tools were developed with the Raspberry Pi 400 in mind, they will probably also work on any of the Raspberry Pi models, 3B+ and up, though that hasn't been tested thoroughly yet.
-
-There are two ways you can go about setting up your Pi to run Jamulus. One is to just the pre-configured image file (meant for the Raspberry Pi 400), the other is to install Jamulus yourself, using the scripts we provide here. These scripts should work for all versions of the Raspberry Pi.
+The preconfigured SD card image was built for the Raspberry Pi 400, and probably would only work there. The scripts should work on any Raspberry Pi.
 
 ## Step 0: When you just want to download a pre-configured image
 
@@ -12,7 +10,7 @@ A. If all you want to do is download a Raspbery Pi SD card image with Jamulus pr
 
 For documentation on how to use this SD card image, open the "Step by Step" PDF file from the main Rpi400Jam code directory.
 
-B. If you'd like to build the Raspberry Pi image yourself, perform the steps below.
+B. If you'd like to install Jamulus yourself, aided by the scripts provided, perform the following steps.
 
 ## Step 1: Download the tools to your Raspberry Pi:
 
@@ -102,7 +100,16 @@ Once you've confirmed the Jamulus installation is good, you can more easily run 
 
 ## Step 10. Setup Jamulus Server as a Service (optional)
 
-You can run Jamulus as a server by using the -s command line option (along with some others -- see Jamulus documentation) but its easier to set it up as a service and run it that way. The file jamulus.service has the settings for doing this. This file needs to be copied to another place in the OS, as follows:
+You can run Jamulus as a server by using the -s command line option (along with some others -- see Jamulus documentation) but its easier to set it up as a service and run it that way. The file jamulus.service has initial settings for doing this. You'll want to edit this file and customize it for your installation. The settings as provided use a Phoenix locale, the default port number of 22124, and has a "Welcome to RpiJam400 server" message. For information on the server settings, see the Jamulus documentation. A simple way edit the jamulus.service file to make these changes is as follows, using the nano editor:
+
+```
+$ cd ~/Rpi400Jam
+$ nano jamulus.service
+```
+
+Of course, you can use whatever editor you'd like.
+
+Next, the jamulus.service file needs to be given the appropriate permissions and moved to another location in the OS:
 
 ```
 $ cd ~/Rpi400Jam
@@ -110,7 +117,13 @@ $ sudo chmod 644 jamulus.service
 $ cp jamulus.service /etc/systemd/system/jamulus.service
 ```
 
-## Step 11. Run Jamulus Server as a Service
+## Step 11. Setup Jamulus for use as a private server (optional)
+
+If you are going to run Jamulus as a public server, nothing else needs to be set up (just start the server using Step 12). 
+
+If, however, you wish to use Jamulus as a private server, you'll have to enable port-forwarding on your router, which is beyond the scope of this document. Use the port as given in Step 10. By default, that port is 22124.
+
+## Step 12. Run Jamulus Server as a Service (optional)
 
 To start the jamulus service:
 
@@ -130,7 +143,7 @@ To stop the jamulus service:
 $ sudo systemctl stop jamulus
 ```
 
-It's also possible to have jamulus enabled as a service at startup
+It's also possible to have jamulus enabled as a service at boot time
 
 ```
 $ sudo systemctl enable jamulus
