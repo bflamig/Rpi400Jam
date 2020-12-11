@@ -107,7 +107,7 @@ Next, the jamulus.service file needs to be given the appropriate permissions and
 ```
 $ cd ~/Rpi400Jam
 $ sudo chmod 644 jamulus.service
-$ cp jamulus.service /etc/systemd/system/jamulus.service
+$ sudo cp jamulus.service /etc/systemd/system/jamulus.service
 ```
 
 ## Step 11. Setup Jamulus for use as a private server (optional)
