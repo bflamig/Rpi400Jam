@@ -8,7 +8,7 @@ The preconfigured SD card image was built for the Raspberry Pi 400, and probably
 
 A. If all you want to do is download a Raspbery Pi SD card image with Jamulus pre-installed, well, have we got a deal for you! Just click on the following link to download the roughly 1.5 GB file (!): [rpi400_jamulus_img.gz](https://1drv.ms/u/s!AhEZTg91Hm5djLomozNlJeGKnyNP3w?e=lJbXZu "rpi400_jamulus_img.gz")
 
-For documentation on how to use this SD card image, open the "Step by Step" PDF file from the main Rpi400Jam code directory.
+For documentation on how to use this SD card image, open the "Step by Step" PDF file from the main Rpi400Jam code directory. NOTE #1: These are NOT the same steps as given below. Those are if you want to install Jamulus manually on an already set up Raspberry Pi. NOTE #2: If you click on the PDf file, and view it in your browser, the links given in the PDF will *not* work. You don't need them anyway, as you are already here. If you download the PDF, and then open it with, say, Adobe Acrobat, then the links will work.
 
 B. If you'd like to install Jamulus yourself, aided by the scripts provided, perform the following steps.
 
