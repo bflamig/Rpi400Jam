@@ -53,7 +53,7 @@ $ sudo reboot now
 
 After rebooting (or while shutdown), hook up your sound card if it's not already hooked up, and then determine its name by using the following command, which lists the sound cards on your machine.
 
-$ cat/proc/asound/cards
+$ cat /proc/asound/cards
 
 In the list produced your sound card will likely be last. Its name is in the square brackets on the left. Note that name. For FocusRite Scarlett devices, the name is usually just "USB". For a Behringer UMC404HD it's "U192k". Notice the upper case 'U' and lower case 'k'.
   
