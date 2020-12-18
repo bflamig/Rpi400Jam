@@ -91,7 +91,16 @@ NOTE: For lowest latency, it's usually best to try checking the "Use small netwo
 
 Once you've confirmed the Jamulus installation is good, you can more easily run Jamulus by clicking on the Jamulus icon in "Sound and Video" entry of the main menu on the desktop. Note that you don't need to start qjackctl at first. In fact, you don't need it at all.
 
-## Step 10. Setup Jamulus Server as a Service (optional)
+## Step 10. Updating Jamulus
+
+If a new release of Jamulus comes out, you can update your machine by using the jamulus_update.sh script. You'll need to pass the release version string as a command line argument to the script. For example, suppose you have version 3.6.1 installed and want to update the version 3.6.2. You would need to pass the string r3_6_2:
+
+$ cd ~/
+$ jamulus_setup.sh r3_6_2
+
+This script will download the version specified, and then compile and install it. On the lowly Raspberry Pi, the compliation process takes a while, maybe ten minutes or more. (I haven't actually timed it.)
+
+## Step 11. Setup Jamulus Server as a Service (optional)
 
 You can run Jamulus as a server by using the -s command line option (along with some others -- see Jamulus documentation) but its easier to set it up as a service and run it that way. The file jamulus.service has initial settings for doing this. You'll want to edit this file and customize it for your installation. The settings as provided use a Phoenix locale, the default port number of 22124, and has a "Welcome to RpiJam400 server" message. For information on the server settings, see the Jamulus documentation. A simple way edit the jamulus.service file to make these changes is as follows, using the nano editor:
 
@@ -110,13 +119,13 @@ $ sudo chmod 644 jamulus.service
 $ sudo cp jamulus.service /etc/systemd/system/jamulus.service
 ```
 
-## Step 11. Setup Jamulus for use as a private server (optional)
+## Step 12. Setup Jamulus for use as a private server (optional)
 
-If you are going to run Jamulus as a public server, nothing else needs to be set up (just start the server using Step 12). 
+If you are going to run Jamulus as a public server, nothing else needs to be set up (just start the server using Step 13). 
 
-If, however, you wish to use Jamulus as a private server, you'll have to enable port-forwarding on your router, which is beyond the scope of this document. Use the port as given in Step 10. By default, that port is 22124.
+If, however, you wish to use Jamulus as a private server, you'll have to enable port-forwarding on your router, which is beyond the scope of this document. Use the port as given in Step 11. By default, that port is 22124.
 
-## Step 12. Run Jamulus Server as a Service (optional)
+## Step 13. Run Jamulus Server as a Service (optional)
 
 To start the jamulus service:
 
@@ -126,7 +135,9 @@ $ sudo systemctl start jamulus
 
 You can view the system log to see if the service started correctly
 
+```
 $ cat /var/log/syslog
+```
 
 Scroll to the bottom to see the latest log messages
 
