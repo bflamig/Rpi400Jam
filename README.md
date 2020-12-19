@@ -95,7 +95,9 @@ Once you've confirmed the Jamulus installation is good, you can more easily run 
 
 If a new release of Jamulus comes out, you can update your machine by using the jamulus_update.sh script. You'll need to pass the release version string as a command line argument to the script. For example, suppose you have version 3.6.1 installed and want to update the version 3.6.2. You would need to pass the string r3_6_2:
  
+```
 $ jamulus_update.sh r3_6_2
+```
 
 This script will download the version specified, and then compile and install it. On the lowly Raspberry Pi, the compliation process takes a while, maybe ten minutes or more. (I haven't actually timed it.)
 
