@@ -5,7 +5,10 @@ sudo apt-get -y install build-essential qtdeclarative5-dev qt5-default qttools5-
 sudo apt-get -y install patchage qjackctl
 cd ~/
 rm -r -f jamulus
-git clone -b $1 https://github.com/corrados/jamulus.git
+# uncomment the line below for jamulus versions before 3_7_0
+#git clone -b $1 https://github.com/corrados/jamulus.git
+# uncomment the line below for jamulus versions on or after 3_7_0
+git clone -b $1 https://github.com/jamulussoftware/jamulus.git
 cd ~/jamulus
 qmake Jamulus.pro
 make clean
